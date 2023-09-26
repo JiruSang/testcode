@@ -1,5 +1,6 @@
 import logger
-
+import utils
+from Solution import SolutionAgent
 
 if __name__ == '__main__':
     try:
@@ -9,6 +10,12 @@ if __name__ == '__main__':
         elif not word_grid.isalpha():
             print("Character should only be alphabet")
         else:
-            print(word_grid)
+            original_grid = utils.clean_string(word_grid)
+            structured_grid = utils.convert_to_structured(original_grid)
+            solution_agent = SolutionAgent()
+            print(solution_agent.exist(structured_grid, 'ABANDON'))
+
+
+
     except Exception as e:
         logger.error(e)
