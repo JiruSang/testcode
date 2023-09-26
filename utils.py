@@ -17,3 +17,12 @@ def convert_to_structured(word):
             array_2d[i][j] = word[index]
             index += 1
     return array_2d
+
+def read_file_in(file_path):
+    words = []
+
+    with open(file_path, "r") as file:
+        for line in file:
+            words.append(line.strip())
+            
+    return words
