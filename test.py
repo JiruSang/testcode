@@ -13,9 +13,11 @@ if __name__ == '__main__':
             original_grid = utils.clean_string(word_grid)
             structured_grid = utils.convert_to_structured(original_grid)
             solution_agent = SolutionAgent()
-            print(solution_agent.exist(structured_grid, 'ABANDON'))
 
-
+            check_strings = ["be","ha","ah","bee","ebb", "he", "hah"]
+            for word in check_strings:
+                if solution_agent.exist(structured_grid, word):
+                    print(word)
 
     except Exception as e:
         logger.error(e)

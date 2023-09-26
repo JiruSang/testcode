@@ -1,8 +1,10 @@
+import utils
 class SolutionAgent:
   def exist(self, board, word) -> bool:
     m = len(board)
     n = len(board[0])
 
+    word = utils.clean_string(word)
     def dfs(i: int, j: int, s: int) -> bool:
       if i < 0 or i == m or j < 0 or j == n:
         return False
