@@ -24,5 +24,5 @@ def read_file_in(file_path):
     with open(file_path, "r") as file:
         for line in file:
             words.append(line.strip())
-            
+
     return words
