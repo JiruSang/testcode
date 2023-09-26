@@ -4,6 +4,8 @@ import utils
 from Solution import SolutionAgent
 
 if __name__ == '__main__':
+    words_file_path = ''
+    grid_string = ''
     if len(sys.argv) == 3:
         words_file_path = sys.argv[1]
         grid_string = sys.argv[2]
